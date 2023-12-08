@@ -71,10 +71,11 @@ botonEnter.addEventListener('click', () => {
             realizado:false,
             eliminado:false
         })
+        localStorage.setItem('TODO', JSON.stringify(LIST))
+        input.value=''
+        id++
     }
-    localStorage.setItem('TODO', JSON.stringify(LIST))
-    input.value=''
-    id++
+    
 })
 
 document.addEventListener("keyup", function(event){
@@ -88,10 +89,10 @@ document.addEventListener("keyup", function(event){
             realizado:false,
             eliminado:false
         })
+        localStorage.setItem('TODO', JSON.stringify(LIST))
+        input.value=''
+        id++
     }
-    localStorage.setItem('TODO', JSON.stringify(LIST))
-    input.value=''
-    id++
     }
 })
 
@@ -101,10 +102,12 @@ lista.addEventListener('click', function(event){
 
     if(elementData === "realizado"){
         tareaRealizada(element)
+        localStorage.setItem('TODO', JSON.stringify(LIST))
     }else if (elementData === "eliminado"){
         tareaEliminada(element)
+        localStorage.setItem('TODO', JSON.stringify(LIST))
     }
-    localStorage.setItem('TODO', JSON.stringify(LIST))
+
 })
 
 
